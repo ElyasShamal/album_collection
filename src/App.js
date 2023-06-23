@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { albumCollection } from "./data";
+import Album from "./components/Album";
 
 function App() {
   return (
@@ -16,19 +17,6 @@ function App() {
         <Album album={albumCollection[6]} />
         <Album album={albumCollection[7]} />
       </div>
-    </div>
-  );
-}
-
-function Album({ album }) {
-  const { title, artist, year, rating, coverUrl } = album;
-  return (
-    <div className="album">
-      <h2>Title : {title}</h2>
-      <p>Artist : {artist}</p>
-      <p>Year : {year}</p>
-      <p>Rating : {rating}</p>
-      <img src={coverUrl} alt="" />
     </div>
   );
 }
