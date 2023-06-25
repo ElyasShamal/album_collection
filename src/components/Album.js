@@ -1,7 +1,8 @@
 import React from "react";
+import Player from "./Player";
 
 function Album({ album }) {
-  const { title, artist, year, rating, coverUrl } = album;
+  const { title, artist, year, rating, coverUrl, spotifyId } = album;
   return (
     <div className="album">
       <h2>Title : {title}</h2>
@@ -9,6 +10,7 @@ function Album({ album }) {
       <p>Year : {year}</p>
       <p>Rating : {rating}</p>
       <img src={coverUrl} alt="" />
+      <Player spotifyId={spotifyId} />
     </div>
   );
 }
